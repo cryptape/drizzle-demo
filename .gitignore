@@ -1,0 +1,6 @@
+/node_modules
+/truffle.js
+/build
+/build_webpack
+.idea
+.DS_Store

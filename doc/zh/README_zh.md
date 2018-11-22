@@ -1,63 +1,62 @@
 # Demo3: Drizzle Truffle Box
 
-[中文版](doc/zh/README_zh.md)
+这个 demo 使用 drizzle-truffle-box 作为例子展示如何使用 [AppChain-Truffle-Migrate](https://github.com/cryptape/appchain-truffle-migrate) 部署多个合约。
 
-This demo use drizzle-truffle-box as an example to show you [AppChain-Truffle-Migrate](https://github.com/cryptape/appchain-truffle-migrate) can deploy multiple contracts.
+# 如何让 demo 跑起来
 
-# How to run this demo
-
-## 1. Install Truffle globally
+## 1. 全局安装 truffle
 
 ```shell
 npm install -g truffle
 ```
 
-## 2. Download repo
-Download this repo.
+## 2. 下载仓库
+
+下载仓库。
 
 ```shell
 git clone https://github.com/cryptape/drizzle-demo
 ```
 
-## 3. Install all dependencies
+## 3. 安装依赖
 
 ```shell
 yarn install
 ```
 
-or
+或者
 
 ```shell
 npm install
 ```
 
-## 4. Configuration
+## 4. 配置参数
 
-Create truffle.js.
+创建 truffle.js。
 
 ```shell
 cp truffle.js.example truffle.js
 ```
 
-## 5. Compile the smart contracts
+## 5. 编译合约
 
 ```shell
 truffle compile
 ```
 
-on winodws:
+windows 下执行：
 
 ```shell
 truffle.cmd compile
 ```
 
-## 6. Deploy the contract
-> Notice: We use [AppChain-Truffle-Migrate](https://github.com/cryptape/appchain-truffle-migrate) to deploy the contract, so the command is different from truffle-box.
+## 6. 部署合约
+> 注意: 我们使用 [AppChain-Truffle-Migrate](https://github.com/cryptape/appchain-truffle-migrate) 来部署合约, 所以使用的命令与 truffle-box 有所不同。
 
 ```shell
 yarn migrate
 ```
-If your terminal shows informations below means you successfully deployed multiple contracts.
+如果终端显示以下信息，代表已经成功部署多个合约。
 
 ```shell
 > appchain-migrate migrate
@@ -86,15 +85,15 @@ transaction hash of deploy contract:  0x479f6359d18d725821bb59afcf2b5791124b6465
 Saving artifacts...
 ```
 
-## 7. Test contract
+## 7. 测试合约
 
-To test whether contracts already deployed, you can change directory to contracts then run contract.test.js.
+为了验证所有合约已经成功部署，将文件目录切换至 contracts，并运行 contract.test.js。
 
 ```shell
 cd contracts
 node contract.test.js
 ```
-In the shell will display the test result.
+终端将会显示测试结果。
 
 ```shell
 ###### Simple Storage Contract Test Begin ######
